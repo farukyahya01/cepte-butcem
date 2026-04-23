@@ -9,7 +9,7 @@ const TabLayout = () => {
 
     const TabIcon = ({ name, focused }: { name: string, focused: boolean }) => {
         const Icon = icons[name as keyof typeof icons];
-        return <Icon size={24} color={focused ? "black" : "gray"} className="w-6 h-6" />;
+        return <Icon size={24} color={focused ? "black" : "gray"} className="w-9 h-9" />;
     };
 
     return (
@@ -32,7 +32,7 @@ const TabLayout = () => {
                     name={tab.name} 
                     options={{ 
                         title: tab.title, 
-                        href: tab.name as any, 
+                        href: tab.href as any, 
                         tabBarIcon: ({ color, size, focused }) => <TabIcon name={tab.icon} focused={focused} /> 
                     }} />
             ))}
